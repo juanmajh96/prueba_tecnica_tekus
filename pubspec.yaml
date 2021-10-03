@@ -1,0 +1,27 @@
+name: prueba_tecnica_tekus
+description: Prueba tecnica para tekus por Juan Jaramillo.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+ 
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  very_good_analysis: ^2.3.0
+
+flutter:
+
+  uses-material-design: true
+
+

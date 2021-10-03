@@ -1,6 +1,5 @@
 import 'dart:convert';
 
-import 'package:digital_currency/digital_currency.dart';
 import 'package:digital_currency/src/data/datasource/datasource.dart';
 import 'package:digital_currency/src/data/model/response_model.dart';
 import 'package:digital_currency/src/domain/entities/request_entity.dart';

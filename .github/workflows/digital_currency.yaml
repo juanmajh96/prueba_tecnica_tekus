@@ -1,6 +1,11 @@
-name: prueba_tecnica_tekus
+name: digital_currency
 
-on: [pull_request, push]
+on: 
+  [pull_request, push]
+    paths:
+      - "packages/digital_currency/**"
+      - ".github/workflows/digital_currency.yaml"
+
 
 jobs:
   build:
@@ -25,7 +30,3 @@ jobs:
 
       - name: Run tests
         run: flutter test --no-pub --coverage --test-randomize-ordering-seed random
-      
-      
-
-        

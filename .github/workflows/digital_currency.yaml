@@ -1,7 +1,7 @@
 name: digital_currency
 
 on: 
-  [pull_request, push]
+  push:
     paths:
       - "packages/digital_currency/**"
       - ".github/workflows/digital_currency.yaml"

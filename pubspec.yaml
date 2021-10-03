@@ -10,13 +10,13 @@ environment:
 
 
 dependencies:
+  digital_currency:
+    path: packages/digital_currency
   flutter:
     sdk: flutter
 
  
 dev_dependencies:
-  digital_currency:
-    path: packages/digital_currency
   flutter_test:
     sdk: flutter
 

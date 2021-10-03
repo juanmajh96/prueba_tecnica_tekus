@@ -51,7 +51,7 @@ packages:
     source: hosted
     version: "0.10.0"
   digital_currency:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       path: "packages/digital_currency"
       relative: true

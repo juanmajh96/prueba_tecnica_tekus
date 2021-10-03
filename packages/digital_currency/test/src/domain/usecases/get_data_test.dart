@@ -48,5 +48,19 @@ void main() {
         verify(() => _repositories.getData(requestEntity)).called(1);
       },
     );
+
+    test(
+      'Its should return DigitalCurrencyError if It not work',
+      () async {
+        when(() => _repositories.getData(requestEntity)).thenAnswer(
+          (_) async => const Left(InternetError()),
+        );
+
+        final _result = await _usecase(requestEntity);
+
+        expect(_result.fold(id, id), isA<InternetError>());
+        verify(() => _repositories.getData(requestEntity)).called(1);
+      },
+    );
   });
 }

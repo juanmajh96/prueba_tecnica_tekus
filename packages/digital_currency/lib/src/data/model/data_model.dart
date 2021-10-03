@@ -1,9 +1,9 @@
 import 'package:digital_currency/src/domain/entities/entities.dart';
 
 ///model for data
-class DataEntityModel extends DataEntity {
+class DataModel extends DataEntity {
   ///Use super to save variable in entity
-  const DataEntityModel({
+  const DataModel({
     required final String base,
     required final String currency,
     required final double amount,
@@ -13,8 +13,8 @@ class DataEntityModel extends DataEntity {
           amount: amount,
         );
 
-  factory DataEntityModel.fromJson(Map<String, dynamic> json) =>
-      DataEntityModel(
+  ///[DataModel.fromJson] interface to create DataModel object
+  factory DataModel.fromJson(Map<String, dynamic> json) => DataModel(
         base: json['base'] as String,
         currency: json['currency'] as String,
         amount: json['amount'] as double,

@@ -1,4 +1,4 @@
-///Entity
+///Entity for data
 class DataEntity {
   ///Required parameters in this entity
   const DataEntity({

@@ -1,2 +1,5 @@
 ///
-class RequestEntity {}
+class RequestEntity {
+  ///
+  const RequestEntity();
+}

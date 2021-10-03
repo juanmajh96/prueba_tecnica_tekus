@@ -1,9 +1,9 @@
 import 'package:digital_currency/src/domain/entities/data_entity.dart';
 
-///[responseEntity] facade for data
+/// facade for data
 class ResponseEntity {
   /// data may changed easilynb
-  ResponseEntity({
+  const ResponseEntity({
     required this.dataEntityList,
   });
 

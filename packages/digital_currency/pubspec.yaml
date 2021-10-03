@@ -12,13 +12,11 @@ dependencies:
   flutter:
     sdk: flutter
 
-  
-
  
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
+  mocktail: ^0.1.4
   very_good_analysis: ^2.3.0
 
 flutter:

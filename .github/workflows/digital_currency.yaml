@@ -9,6 +9,9 @@ on:
 
 jobs:
   build:
+    defaults:
+      run:
+        working-directory: packages/digital_currency
     runs-on: ubuntu-latest
 
     steps:

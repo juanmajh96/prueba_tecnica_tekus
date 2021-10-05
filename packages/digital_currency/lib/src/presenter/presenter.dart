@@ -1,1 +1,1 @@
-
+export './module.dart';

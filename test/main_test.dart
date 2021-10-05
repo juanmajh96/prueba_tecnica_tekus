@@ -7,6 +7,6 @@ void main() {
     await tester.pumpWidget(
       const MyApp(),
     );
-    expect(find.byType(Center), findsOneWidget);
+    expect(find.byType(MaterialApp), findsOneWidget);
   });
 }

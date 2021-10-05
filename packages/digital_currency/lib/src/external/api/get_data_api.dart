@@ -5,15 +5,15 @@ import 'package:digital_currency/src/domain/domain.dart';
 import 'package:http/http.dart' as http;
 
 ///
-abstract class GetLatestTwoWeeks {
+abstract class GetDataApi {
   ///
   Future<ResponseModel> getDatasource(String date, {String? currency});
 }
 
 ///
-class GetLatestTwoWeeksImpl implements GetLatestTwoWeeks {
+class GetDataApiImpl implements GetDataApi {
   ///
-  GetLatestTwoWeeksImpl({required this.client});
+  GetDataApiImpl({required this.client});
 
   ///
   final http.Client client;

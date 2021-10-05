@@ -24,17 +24,20 @@ class _DigitalCurrencyState extends State<DigitalCurrency> {
   late ScrollControllerDigitalCurrency _scrollControllerDigitalCurrency;
   late DigitalCurrencyRepositories _repositories;
   late DigitalCurrencyDatasource _datasource;
+  late GetDataApi _api;
+  late LocalDateUtil _localDate;
   late GetData _getData;
   late BodyBloc _bodyBloc;
-  late GetLatestTwoWeeks _api;
-  late LocalDateUtil _localDate;
+  late GetDataRealTime _getDataRealTime;
+  late HeaderBloc _headerBloc;
+  late DisposeResource _disposeResource;
 
   @override
   void initState() {
     ///dependencies inyection
     _scrollControllerDigitalCurrency = ScrollControllerDigitalCurrency()
       ..initLisening();
-    _api = GetLatestTwoWeeksImpl(
+    _api = GetDataApiImpl(
       client: http.Client(),
     );
     _localDate = LocalDateUtilImpl();
@@ -44,14 +47,20 @@ class _DigitalCurrencyState extends State<DigitalCurrency> {
     );
     _repositories = DigitalCurrencyRepository(_datasource);
     _getData = GetDataImpl(_repositories);
+    _disposeResource = DisposeResourceImpl(_repositories);
+    _getDataRealTime = GetDataRealTimeImpl(_repositories);
     _bodyBloc = BodyBloc(getData: _getData)..getDataBloc();
+    _headerBloc = HeaderBloc(getDataRealTime: _getDataRealTime);
+
     super.initState();
   }
 
   @override
   void dispose() {
-    ///destroyed resource in controller
+    ///destroyed resource
     _scrollControllerDigitalCurrency.dispose();
+    _headerBloc.dispose();
+    _disposeResource();
     super.dispose();
   }
 
@@ -62,6 +71,7 @@ class _DigitalCurrencyState extends State<DigitalCurrency> {
       inheritedScrollController: _scrollControllerDigitalCurrency,
       bodyBloc: _bodyBloc,
       getData: _getData,
+      headerBloc: _headerBloc,
       child: const HomeDigitalCurrency(),
     );
   }
@@ -77,6 +87,7 @@ class InheritedDigitalCurrency extends InheritedWidget {
     required this.inheritedScrollController,
     required this.bodyBloc,
     required this.getData,
+    required this.headerBloc,
   }) : super(key: key, child: child);
 
   ///information that We want extend
@@ -85,6 +96,9 @@ class InheritedDigitalCurrency extends InheritedWidget {
 
   ///state manager object
   final BodyBloc bodyBloc;
+
+  ///state manager object
+  final HeaderBloc headerBloc;
 
   ///usecase
   final GetData getData;

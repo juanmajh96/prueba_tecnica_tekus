@@ -55,7 +55,8 @@ class BodyDetailsDigitalCurrency extends StatelessWidget {
                             ),
                             const SizedBox(width: 10),
                             CardWidget(
-                              amount: state.listData[2].amount,
+                              amount: state.listData[2].amount.substring(
+                                  0, state.listData[2].amount.length - 5),
                               icon: const Text(
                                 '🇨🇴 ',
                                 style: TextStyle(fontSize: 25),

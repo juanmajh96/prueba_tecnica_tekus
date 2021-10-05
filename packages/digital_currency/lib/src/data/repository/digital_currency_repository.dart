@@ -32,4 +32,13 @@ class DigitalCurrencyRepository implements DigitalCurrencyRepositories {
       );
     }
   }
+
+  @override
+  Stream<Either<DigitalCurrencyError, ResponseEntity>> getDataRealTime(
+      RequestEntity requestEntity) async* {
+    yield* _datasource.datasourceRealTime(requestEntity);
+  }
+
+  @override
+  void disposeResource() => _datasource.disposeResource();
 }

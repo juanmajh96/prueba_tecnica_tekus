@@ -98,12 +98,16 @@ class CardWidget extends StatelessWidget {
 ///
 class CardShimmerLoading extends StatelessWidget {
   ///
-  const CardShimmerLoading({Key? key}) : super(key: key);
+  const CardShimmerLoading({Key? key, this.color = Colors.white})
+      : super(key: key);
+
+  ///
+  final Color color;
 
   @override
   Widget build(BuildContext context) {
-    return const ShimmerAnimation(
-      color: Colors.white,
+    return ShimmerAnimation(
+      color: color,
       height: 120,
       width: 120,
       borderRadius: 5,

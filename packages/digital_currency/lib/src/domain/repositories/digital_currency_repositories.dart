@@ -9,4 +9,12 @@ abstract class DigitalCurrencyRepositories {
   Future<Either<DigitalCurrencyError, ResponseEntity>> getData(
     RequestEntity requestEntity,
   );
+
+  ///
+  Stream<Either<DigitalCurrencyError, ResponseEntity>> getDataRealTime(
+    RequestEntity requestEntity,
+  );
+
+  ///
+  void disposeResource();
 }

@@ -10,28 +10,28 @@ class HeadDigitalCurrency extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: const [
-        Spacer(),
-        CardWidget(
-          amount: '47.800.87',
-          icon: Text('🇺🇸', style: TextStyle(fontSize: 25)),
-          currency: 'USD',
-          base: 'BTC',
-        ),
-        Spacer(),
+        SizedBox(width: 10),
         CardWidget(
           amount: '30.050.04',
           icon: Text('🇪🇺', style: TextStyle(fontSize: 25)),
           currency: 'EUR',
           base: 'BTC',
         ),
-        Spacer(),
+        SizedBox(width: 10),
+        CardWidget(
+          amount: '47.800.87',
+          icon: Text('🇺🇸', style: TextStyle(fontSize: 25)),
+          currency: 'USD',
+          base: 'BTC',
+        ),
+        SizedBox(width: 10),
         CardWidget(
           amount: '180.000.000',
           icon: Text('🇨🇴 ', style: TextStyle(fontSize: 25)),
           currency: 'COP',
           base: 'BTC',
         ),
-        Spacer(),
+        SizedBox(width: 10),
       ],
     );
   }

@@ -28,6 +28,7 @@ class AnimationForHead extends StatelessWidget {
         InheritedDigitalCurrency.of(context)!.inheritedScrollController;
     return ValueListenableBuilder<double>(
       valueListenable: _inherited.scrollNotifier,
+      child: head,
       builder: (context, value, child) {
         final percent =
             lerpDouble(0.0, -pi / 2, (value / _space).clamp(0.0, 1.0))!;
@@ -54,7 +55,7 @@ class AnimationForHead extends StatelessWidget {
                       ..setEntry(3, 2, 0.003)
                       ..rotateX(percent),
                     alignment: Alignment.center,
-                    child: head,
+                    child: child,
                   ),
                 ),
               ),

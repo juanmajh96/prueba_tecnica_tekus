@@ -1,5 +1,5 @@
 import 'package:digital_currency/src/domain/entities/entities.dart';
 
-const responseEntity = ResponseEntity(
+final responseEntity = ResponseEntity(
   dataEntityList: <DataEntity>[],
 );

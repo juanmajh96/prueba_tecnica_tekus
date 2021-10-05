@@ -23,7 +23,7 @@ void main() {
       'Its should return ResponseMapCustomerEntity if its succesfull',
       () async {
         when(() => _repositories.getData(requestEntity)).thenAnswer(
-          (_) async => const Right(responseEntity),
+          (_) async => Right(responseEntity),
         );
 
         final _result = await _usecase(requestEntity);

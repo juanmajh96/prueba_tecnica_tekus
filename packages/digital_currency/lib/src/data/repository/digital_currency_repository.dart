@@ -20,7 +20,11 @@ class DigitalCurrencyRepository implements DigitalCurrencyRepositories {
       return Right(_result);
     } on SocketException {
       return const Left(
-        InternetError(),
+        InternetError(messageError: 'internet connection failure'),
+      );
+    } on DatasourceError catch (error) {
+      return Left(
+        DatasourceError(messageError: error.messageError),
       );
     } catch (e) {
       return Left(

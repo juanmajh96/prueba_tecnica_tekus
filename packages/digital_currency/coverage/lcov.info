@@ -28,13 +28,13 @@ LH:3
 end_of_record
 SF:lib/src/data/model/data_model.dart
 DA:6,1
-DA:10,0
-DA:17,0
+DA:10,1
 DA:18,0
 DA:19,0
 DA:20,0
+DA:21,0
 LF:6
-LH:1
+LH:2
 end_of_record
 SF:lib/src/data/model/response_model.dart
 DA:7,1

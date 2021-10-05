@@ -1,3 +1,4 @@
+import 'package:digital_currency/src/presenter/customs_widgets/shimmer_animation.dart';
 import 'package:flutter/material.dart';
 
 ///
@@ -33,61 +34,79 @@ class CardWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: color,
-        border: Border.all(
-          color: Colors.grey.withOpacity(0.3),
+    return Expanded(
+      child: Container(
+        decoration: BoxDecoration(
+          color: color,
+          border: Border.all(
+            color: Colors.grey.withOpacity(0.3),
+          ),
+          borderRadius: const BorderRadius.all(Radius.circular(10)),
         ),
-        borderRadius: const BorderRadius.all(Radius.circular(10)),
-      ),
-      width: 120,
-      child: Padding(
-        padding: const EdgeInsets.all(14),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Expanded(
-              flex: 2,
-              child: Align(
-                child: icon,
+        width: 120,
+        child: Padding(
+          padding: const EdgeInsets.all(14),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Expanded(
+                flex: 2,
+                child: Align(
+                  child: icon,
+                ),
               ),
-            ),
-            Expanded(
-              flex: 2,
-              child: Align(
+              Expanded(
+                flex: 2,
+                child: Align(
+                  child: Text(
+                    currency,
+                    style: const TextStyle(
+                      color: Colors.black87,
+                    ),
+                  ),
+                ),
+              ),
+              const Spacer(),
+              Expanded(
+                flex: 2,
                 child: Text(
-                  currency,
+                  base,
                   style: const TextStyle(
                     color: Colors.black87,
                   ),
                 ),
               ),
-            ),
-            const Spacer(),
-            Expanded(
-              flex: 2,
-              child: Text(
-                base,
-                style: const TextStyle(
-                  color: Colors.black87,
-                ),
-              ),
-            ),
-            Expanded(
-              flex: 2,
-              child: FittedBox(
-                child: Text(
-                  amount,
-                  style: const TextStyle(
-                    fontWeight: FontWeight.w500,
+              Expanded(
+                flex: 2,
+                child: FittedBox(
+                  child: Text(
+                    amount,
+                    style: const TextStyle(
+                      fontWeight: FontWeight.w500,
+                    ),
                   ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
+    );
+  }
+}
+
+///
+class CardShimmerLoading extends StatelessWidget {
+  ///
+  const CardShimmerLoading({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return const ShimmerAnimation(
+      color: Colors.white,
+      height: 120,
+      width: 120,
+      borderRadius: 5,
     );
   }
 }

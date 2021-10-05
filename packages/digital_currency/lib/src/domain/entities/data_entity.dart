@@ -1,10 +1,11 @@
 ///Entity for data
 class DataEntity {
   ///Required parameters in this entity
-  const DataEntity({
+  DataEntity({
     required this.base,
     required this.currency,
     required this.amount,
+    required this.date,
   });
 
   ///Digital currency
@@ -14,5 +15,8 @@ class DataEntity {
   final String currency;
 
   ///Spot price
-  final double amount;
+  final String amount;
+
+  ///consultation date of the currency
+  String date;
 }

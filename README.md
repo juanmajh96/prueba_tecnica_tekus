@@ -2,8 +2,12 @@
 
 Prueba tecnica para tekus por Juan Jaramillo.
 
-[![License: MIT][license_badge]][license_link]
+[![digital_currency](https://github.com/juanmajh96/prueba_tecnica_tekus/actions/workflows/digital_currency.yaml/badge.svg?branch=digital_currency_v2)](https://github.com/juanmajh96/prueba_tecnica_tekus/actions/workflows/digital_currency.yaml)
+[![prueba_tecnica_tekus](https://github.com/juanmajh96/prueba_tecnica_tekus/actions/workflows/main.yaml/badge.svg)](https://github.com/juanmajh96/prueba_tecnica_tekus/actions/workflows/main.yaml)
 [![style: very good analysis](https://img.shields.io/badge/style-very_good_analysis-B22C89.svg)](https://pub.dev/packages/very_good_analysis)
+[![License: MIT][license_badge]][license_link]
+
+
 
 ## Corriendo Tests 🧪
 

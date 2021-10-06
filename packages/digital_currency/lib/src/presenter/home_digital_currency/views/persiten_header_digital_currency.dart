@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-///
+/// Combine With scroll and persister this widget
 class PersistenHeaderDigitalCurrency extends StatelessWidget {
-  ///
+  ///Constructor
   const PersistenHeaderDigitalCurrency({Key? key}) : super(key: key);
 
   @override

@@ -7,19 +7,19 @@ import 'package:flutter/material.dart';
 const _headerSize = 220.0;
 const _space = _headerSize - 2.3 * kToolbarHeight;
 
-///
+///Animated Header
 class AnimationForHead extends StatelessWidget {
-  ///
+  ///Recibed params
   const AnimationForHead({
     required this.titleHead,
     required this.head,
     Key? key,
   }) : super(key: key);
 
-  ///
+  /// Title on top head
   final Widget titleHead;
 
-  ///
+  /// Principal Widget in center head
   final Widget head;
 
   @override

@@ -5,9 +5,9 @@ import 'package:digital_currency/src/presenter/details_digital_currency/controll
 import 'package:digital_currency/src/presenter/details_digital_currency/views/_home_details_digital_currency.dart';
 import 'package:flutter/material.dart';
 
-///
+/// Content of Dialog
 class BodyDetailsDigitalCurrency extends StatelessWidget {
-  ///
+  /// Constructor
   const BodyDetailsDigitalCurrency({
     Key? key,
   }) : super(key: key);

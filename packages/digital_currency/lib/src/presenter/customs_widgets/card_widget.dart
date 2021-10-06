@@ -1,9 +1,9 @@
 import 'package:digital_currency/src/presenter/customs_widgets/shimmer_animation.dart';
 import 'package:flutter/material.dart';
 
-///
+///Custom widget for display info in card
 class CardWidget extends StatelessWidget {
-  ///
+  /// Constructor
   const CardWidget({
     Key? key,
     required this.amount,
@@ -14,22 +14,22 @@ class CardWidget extends StatelessWidget {
     this.color = Colors.white,
   }) : super(key: key);
 
-  ///
+  ///  Spot amount
   final String amount;
 
-  ///
+  /// Currency digital
   final String currency;
 
-  ///
+  /// Cripto
   final String base;
 
-  ///
+  /// Defined icon
   final Widget icon;
 
-  ///
+  /// Defined height for card
   final double height;
 
-  ///
+  /// Defined color for card
   final Color color;
 
   @override
@@ -95,13 +95,13 @@ class CardWidget extends StatelessWidget {
   }
 }
 
-///
+/// Get card with effec loading
 class CardShimmerLoading extends StatelessWidget {
-  ///
+  /// Colors is optional
   const CardShimmerLoading({Key? key, this.color = Colors.white})
       : super(key: key);
 
-  ///
+  /// Defined color of card
   final Color color;
 
   @override

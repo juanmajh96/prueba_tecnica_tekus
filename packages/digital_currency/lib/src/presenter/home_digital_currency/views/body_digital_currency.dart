@@ -6,9 +6,9 @@ import 'package:digital_currency/src/presenter/home_digital_currency/controllers
 import 'package:digital_currency/src/presenter/module.dart';
 import 'package:flutter/material.dart';
 
-///
+/// Display states of bodybloc
 class BodyDigitalCurrency extends StatelessWidget {
-  ///
+  ///Constructor
   const BodyDigitalCurrency({Key? key}) : super(key: key);
 
   @override

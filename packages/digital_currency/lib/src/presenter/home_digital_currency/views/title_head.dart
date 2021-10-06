@@ -3,9 +3,9 @@ import 'package:digital_currency/src/presenter/home_digital_currency/controllers
 import 'package:digital_currency/src/presenter/module.dart';
 import 'package:flutter/material.dart';
 
-///
+/// Defined the title top in header
 class TitleHead extends StatelessWidget {
-  ////
+  ///Constructor
   const TitleHead({Key? key}) : super(key: key);
 
   @override

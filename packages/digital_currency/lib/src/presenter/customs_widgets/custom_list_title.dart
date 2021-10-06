@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-///
+/// Display custom list title
 class CustomListTitle extends StatelessWidget {
-  ///
+  /// Recibed params
   const CustomListTitle({
     Key? key,
     required this.date,
@@ -11,16 +11,16 @@ class CustomListTitle extends StatelessWidget {
     this.onTap,
   }) : super(key: key);
 
-  ///
+  /// Date
   final String date;
 
-  ///
+  /// Currency
   final String currency;
 
-  ///
+  ///Amount
   final String amount;
 
-  ///
+  /// Function onTap
   final void Function()? onTap;
 
   @override

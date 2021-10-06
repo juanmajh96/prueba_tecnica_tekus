@@ -4,18 +4,18 @@ import 'package:digital_currency/src/data/model/model.dart';
 import 'package:digital_currency/src/domain/errors/errors.dart';
 import 'package:http/http.dart' as http;
 
-///
+/// Get data from api
 abstract class GetDataApi {
-  ///
+  ///method to get data
   Future<ResponseModel> getDatasource(String date, {String? currency});
 }
 
-///
+/// Implementation of interface [GetDataApi]
 class GetDataApiImpl implements GetDataApi {
-  ///
+  /// Recibed http client
   GetDataApiImpl({required this.client});
 
-  ///
+  /// Http client variable
   final http.Client client;
 
   @override

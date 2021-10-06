@@ -15,7 +15,14 @@ class GetDataDigitalCurrency implements DigitalCurrencyDatasource {
   GetDataDigitalCurrency({
     required this.api,
     required this.localDateUtil,
-  });
+  }) : super() {
+    _timer = Timer.periodic(
+      const Duration(seconds: 60),
+      (timer) async {
+        await dataRealTime();
+      },
+    );
+  }
 
   ///
   final GetDataApi api;
@@ -64,12 +71,6 @@ class GetDataDigitalCurrency implements DigitalCurrencyDatasource {
   Stream<Either<DigitalCurrencyError, ResponseEntity>> datasourceRealTime(
       RequestEntity requestEntity) async* {
     await dataRealTime();
-    _timer = Timer.periodic(
-      const Duration(seconds: 60),
-      (timer) async {
-        await dataRealTime();
-      },
-    );
 
     yield* yieldStream;
   }

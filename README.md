@@ -24,9 +24,7 @@ $ open coverage/index.html
 
 ## Demo
 
-| **Hero Animation**    | 
-|------------|-------------| 
- <img src="https://cdn-images-1.medium.com/max/1200/1*rwTC56smf596wlGabQs-MQ.gif" width="250">  
+ <img src="https://cdn-images-1.medium.com/max/500/1*G9Ti86LxY0uiX-euw8UkVg.gif" width="250">  
 
 ## Descarga e instalación  🚀
 

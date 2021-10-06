@@ -2,6 +2,9 @@
 
 Prueba tecnica para tekus por Juan Jaramillo.
 
+[![License: MIT][license_badge]][license_link]
+[![style: very good analysis](https://img.shields.io/badge/style-very_good_analysis-B22C89.svg)](https://pub.dev/packages/very_good_analysis)
+
 ## Corriendo Tests 🧪
 
 Para correr todos los unit y widget test use el siguiente comando
@@ -46,3 +49,7 @@ Esta app esta basada en packages a pesar de solamente tener un modulo, con el fi
     - packages/
        - digital_currency/
 
+
+
+[license_badge]: https://img.shields.io/badge/license-MIT-blue.svg
+[license_link]: https://opensource.org/licenses/MIT

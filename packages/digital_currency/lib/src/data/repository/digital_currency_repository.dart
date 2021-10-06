@@ -7,9 +7,9 @@ import 'package:digital_currency/src/domain/entities/entities.dart';
 import 'package:digital_currency/src/domain/errors/digital_currency_errors.dart';
 import 'package:digital_currency/src/domain/repositories/repositories.dart';
 
-///
+/// Reposytory digital currency
 class DigitalCurrencyRepository implements DigitalCurrencyRepositories {
-  ///
+  /// Required DigitalCurrencyDatasource
   const DigitalCurrencyRepository(this._datasource);
 
   final DigitalCurrencyDatasource _datasource;

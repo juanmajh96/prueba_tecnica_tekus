@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-///
+///Custom Animation for loading page
 class ShimmerAnimation extends StatelessWidget {
-  ///
+  /// Customer your chimmer
   const ShimmerAnimation({
     Key? key,
     this.height = 30,
@@ -13,22 +13,22 @@ class ShimmerAnimation extends StatelessWidget {
     this.margin,
   }) : super(key: key);
 
-  ///
+  /// Size of widget
   final double height;
 
-  ///
+  /// Size of widget
   final double width;
 
-  ///
+  /// Defined color widget
   final Color color;
 
-  ///
+  /// Defined the border widget
   final double borderRadius;
 
-  ///
+  /// Definned padding optional
   final EdgeInsetsGeometry? padding;
 
-  ///
+  /// Definned margin optional
   final EdgeInsetsGeometry? margin;
 
   @override

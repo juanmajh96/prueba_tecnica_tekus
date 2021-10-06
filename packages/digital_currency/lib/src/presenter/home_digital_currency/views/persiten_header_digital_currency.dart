@@ -51,8 +51,5 @@ class _MyHeaderTitle extends SliverPersistentHeaderDelegate {
       false;
 }
 
-///
+/// Size max for Header
 const maxHeaderTitleHeight = 55.0;
-
-///
-typedef OnHeaderChanged = void Function(bool visible);

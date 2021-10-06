@@ -4,9 +4,9 @@ import 'package:digital_currency/src/presenter/home_digital_currency/controllers
 import 'package:digital_currency/src/presenter/module.dart';
 import 'package:flutter/material.dart';
 
-///
+/// Display States head
 class HeadDigitalCurrency extends StatelessWidget {
-  ///
+  ///Constructor
   const HeadDigitalCurrency({Key? key}) : super(key: key);
 
   @override

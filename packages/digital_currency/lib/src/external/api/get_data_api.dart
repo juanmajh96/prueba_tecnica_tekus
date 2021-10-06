@@ -6,7 +6,7 @@ import 'package:http/http.dart' as http;
 
 /// Get data from api
 abstract class GetDataApi {
-  ///method to get data
+  ///Method to get data
   Future<ResponseModel> getDatasource(String date, {String? currency});
 }
 

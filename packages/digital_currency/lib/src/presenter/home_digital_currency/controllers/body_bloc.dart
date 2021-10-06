@@ -3,20 +3,20 @@ import 'package:digital_currency/src/domain/errors/errors.dart';
 import 'package:digital_currency/src/domain/usecases/usecases.dart';
 import 'package:flutter/material.dart' show ValueNotifier;
 
-/// state manager
+/// State manager
 class BodyBloc {
-  /// received usecase
+  /// Received usecase
   BodyBloc({required this.getData});
 
-  /// usecase
+  /// Usecase
   final GetData getData;
 
   final _state = ValueNotifier<StateBodyBloc>(InitialState());
 
-  ///get state
+  ///Get state
   ValueNotifier<StateBodyBloc> get state => _state;
 
-  /// emits states of bloc depending on the response of usecase [GetData]
+  /// Emits states of bloc depending on the response of usecase [GetData]
   Future<void> getDataBloc() async {
     _state.value = LoadingState();
     final _result = await getData(const RequestEntity());
@@ -43,15 +43,15 @@ class ErrorState extends StateBodyBloc {
   ///capture exeption
   ErrorState({required this.error});
 
-  /// exeption object
+  /// Exeption object
   final DigitalCurrencyError error;
 }
 
 /// Succesful
 class CompleteState extends StateBodyBloc {
-  /// when is Succesful there are data
+  /// When is Succesful there are data
   CompleteState({required this.listData});
 
-  /// list lastest two weeks
+  /// List lastest two weeks
   final List<DataEntity> listData;
 }

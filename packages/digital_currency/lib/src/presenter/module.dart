@@ -10,9 +10,9 @@ import 'package:digital_currency/src/presenter/home_digital_currency/home_digita
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-///
+///DigitalCurrency module
 class DigitalCurrency extends StatefulWidget {
-  ///
+  ///Constructor of module
   const DigitalCurrency({Key? key}) : super(key: key);
 
   @override
@@ -20,7 +20,7 @@ class DigitalCurrency extends StatefulWidget {
 }
 
 class _DigitalCurrencyState extends State<DigitalCurrency> {
-  ///dependencies
+  ///Dependencies
   late ScrollControllerDigitalCurrency _scrollControllerDigitalCurrency;
   late DigitalCurrencyRepositories _repositories;
   late DigitalCurrencyDatasource _datasource;
@@ -36,7 +36,7 @@ class _DigitalCurrencyState extends State<DigitalCurrency> {
 
   @override
   void initState() {
-    ///dependencies inyection
+    ///Dependencies inyection
     _scrollControllerDigitalCurrency = ScrollControllerDigitalCurrency()
       ..initLisening();
     _api = GetDataApiImpl(
@@ -59,7 +59,7 @@ class _DigitalCurrencyState extends State<DigitalCurrency> {
 
   @override
   void dispose() {
-    ///destroyed resource
+    ///Destroyed resource
     _scrollControllerDigitalCurrency.dispose();
     _headerBloc.dispose();
     _disposeResource();
@@ -79,10 +79,10 @@ class _DigitalCurrencyState extends State<DigitalCurrency> {
   }
 }
 
-///class that allows those classes to extend the information
-///under the tree from it.
+///Class that allows those classes to extend the information
+///Under the tree from it.
 class InheritedDigitalCurrency extends InheritedWidget {
-  /// child is the widget under the tree
+  /// Child is the widget under the tree
   const InheritedDigitalCurrency({
     Key? key,
     required final Widget child,
@@ -92,20 +92,20 @@ class InheritedDigitalCurrency extends InheritedWidget {
     required this.headerBloc,
   }) : super(key: key, child: child);
 
-  ///information that We want extend
-  /// controller object
+  ///Information that We want extend
+  /// Controller object
   final ScrollControllerDigitalCurrency inheritedScrollController;
 
-  ///state manager object
+  ///State manager object
   final BodyBloc bodyBloc;
 
-  ///state manager object
+  ///State manager object
   final HeaderBloc headerBloc;
 
-  ///usecase
+  ///Usecase
   final GetData getData;
 
-  ///access to information
+  ///Access to information
   static InheritedDigitalCurrency? of(BuildContext context) =>
       context.dependOnInheritedWidgetOfExactType();
 

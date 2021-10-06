@@ -12,9 +12,9 @@ abstract class GetDataRealTime {
   );
 }
 
-/// implementation for interface [GetDataRealTime]
+/// Implementation for interface [GetDataRealTime]
 class GetDataRealTimeImpl implements GetDataRealTime {
-  ///recibed [DigitalCurrencyRepositories]
+  ///Recibed [DigitalCurrencyRepositories]
   const GetDataRealTimeImpl(this._repositories);
 
   final DigitalCurrencyRepositories _repositories;

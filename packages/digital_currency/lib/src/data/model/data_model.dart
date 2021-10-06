@@ -1,6 +1,6 @@
 import 'package:digital_currency/src/domain/entities/entities.dart';
 
-///model for data
+///Model for data
 class DataModel extends DataEntity {
   ///Use super to save variable in entity
   DataModel({

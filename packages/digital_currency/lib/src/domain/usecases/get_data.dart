@@ -14,7 +14,7 @@ abstract class GetData {
 
 /// Implementation to get Data
 class GetDataImpl implements GetData {
-  /// recibed [DigitalCurrencyRepositories]
+  /// Recibed [DigitalCurrencyRepositories]
   const GetDataImpl(this._repositories);
 
   final DigitalCurrencyRepositories _repositories;

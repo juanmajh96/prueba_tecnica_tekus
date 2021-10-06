@@ -1,13 +1,13 @@
 import 'package:digital_currency/src/domain/errors/errors.dart';
 import 'package:flutter/material.dart';
 
-///
+/// Widget for manager custom erros app,
 class CustomErrorWidget extends StatelessWidget {
-  ///
+  ///Recibed intance DigitalCurrencyError and define the type error
   const CustomErrorWidget({Key? key, required this.digitalCurrencyError})
       : super(key: key);
 
-  ///
+  /// Error to defined
   final DigitalCurrencyError digitalCurrencyError;
 
   @override

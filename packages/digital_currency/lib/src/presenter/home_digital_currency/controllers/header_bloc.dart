@@ -61,6 +61,6 @@ class CompleteStateHeader extends StateHeaderBloc {
   /// when is Succesful there are data
   CompleteStateHeader({required this.listData});
 
-  /// list lastest two weeks
+  /// List lastest two weeks
   final List<DataEntity> listData;
 }

@@ -6,9 +6,9 @@ import 'package:digital_currency/src/presenter/home_digital_currency/views/title
 import 'package:digital_currency/src/presenter/module.dart';
 import 'package:flutter/material.dart';
 
-///
+///HomePage module
 class HomeDigitalCurrency extends StatelessWidget {
-  ///
+  ///Constuctor
   const HomeDigitalCurrency({Key? key}) : super(key: key);
 
   @override

@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart' show ScrollController, ValueNotifier;
 
-///
+///Controller for manager Scroll
 class ScrollControllerDigitalCurrency {
   final _scrollController = ScrollController();
   final _scrollNotifier = ValueNotifier<double>(0);
 
-  ///access to ScrollController
+  ///Access to ScrollController
   ScrollController get scrollController => _scrollController;
 
-  ///access to ValueNotifier
+  ///Access to ValueNotifier
   ValueNotifier<double> get scrollNotifier => _scrollNotifier;
 
-  ///init lisening for  scrollController
+  ///Init lisening for  scrollController
   void initLisening() {
     scrollController.addListener(_onListen);
   }
@@ -20,7 +20,7 @@ class ScrollControllerDigitalCurrency {
     scrollNotifier.value = scrollController.offset;
   }
 
-  ///call for destroyed
+  ///Call for destroyed
   void dispose() {
     scrollController.removeListener(_onListen);
   }

@@ -10,11 +10,11 @@ abstract class DigitalCurrencyRepositories {
     RequestEntity requestEntity,
   );
 
-  ///
+  /// Emits in real time  error or response
   Stream<Either<DigitalCurrencyError, ResponseEntity>> getDataRealTime(
     RequestEntity requestEntity,
   );
 
-  ///
+  /// Destroyed resource
   void disposeResource();
 }

@@ -6,7 +6,7 @@ import 'package:digital_currency/src/presenter/details_digital_currency/views/bo
 import 'package:digital_currency/src/presenter/module.dart';
 import 'package:flutter/material.dart';
 
-///
+///Display ShowDialog
 void showCustomDialog(BuildContext context, DataEntity dataEntity) =>
     showGeneralDialog(
       barrierLabel: 'Barrier',
@@ -35,19 +35,19 @@ void showCustomDialog(BuildContext context, DataEntity dataEntity) =>
       },
     );
 
-///
+/// Create widget with state for created one time instance bloc
 class ModuleDetailsDigitalCurrency extends StatefulWidget {
-  ///
+  ///Recibed params
   const ModuleDetailsDigitalCurrency({
     Key? key,
     required this.dataEntity,
     required this.getData,
   }) : super(key: key);
 
-  ///
+  /// Entity
   final DataEntity dataEntity;
 
-  ///
+  /// Usecase
   final GetData getData;
 
   @override
@@ -75,20 +75,20 @@ class _ModuleDetailsDigitalCurrencyState
   }
 }
 
-///under the tree from it.
+///Under the tree from it.
 class InheritedDetailsDigitalCurrency extends InheritedWidget {
-  /// child is the widget under the tree
+  /// Child is the widget under the tree
   const InheritedDetailsDigitalCurrency({
     Key? key,
     required final Widget child,
     required this.detailsBloc,
   }) : super(key: key, child: child);
 
-  ///information that We want extend
-  ///state manager object
+  ///Information that We want extend
+  ///State manager object
   final DetailsBloc detailsBloc;
 
-  ///access to information
+  ///Access to information
   static InheritedDetailsDigitalCurrency? of(BuildContext context) =>
       context.dependOnInheritedWidgetOfExactType();
 

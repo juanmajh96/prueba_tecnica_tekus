@@ -9,9 +9,9 @@ import 'package:digital_currency/src/external/local_date/local_date.dart';
 
 const _listCurrency = ['EUR', 'USD', 'COP'];
 
-///
+///External getData
 class GetDataDigitalCurrency implements DigitalCurrencyDatasource {
-  ///
+  ///Recibed api and localdateUtil
   GetDataDigitalCurrency({
     required this.api,
     required this.localDateUtil,
@@ -24,10 +24,10 @@ class GetDataDigitalCurrency implements DigitalCurrencyDatasource {
     );
   }
 
-  ///
+  /// Interface for called api
   final GetDataApi api;
 
-  ///
+  /// Interface for called date utils
   final LocalDateUtil localDateUtil;
 
   late Timer _timer;
@@ -35,7 +35,7 @@ class GetDataDigitalCurrency implements DigitalCurrencyDatasource {
   final _streamController =
       StreamController<Either<DigitalCurrencyError, ResponseEntity>>();
 
-  ///
+  /// Stream for emit data
   Stream<Either<DigitalCurrencyError, ResponseEntity>> get yieldStream =>
       _streamController.stream;
 
@@ -75,7 +75,7 @@ class GetDataDigitalCurrency implements DigitalCurrencyDatasource {
     yield* yieldStream;
   }
 
-  ///
+  /// Get usd,eur,cop currency ,then emit list of these
   Future<void> dataRealTime() async {
     final _responseModel = ResponseEntity(dataEntityList: <DataEntity>[]);
     final _date = localDateUtil.formattedDate(localDateUtil.getDataTimeNow());

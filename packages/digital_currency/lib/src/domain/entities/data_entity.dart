@@ -17,6 +17,6 @@ class DataEntity {
   ///Spot price
   final String amount;
 
-  ///consultation date of the currency
+  ///Consultation date of the currency
   String date;
 }
